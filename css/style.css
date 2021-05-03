@@ -7,9 +7,15 @@ body {
     font-weight: bold;
     font-family: Arial sans-serif;
     background: url(../img/roulette.jpg) no-repeat center center / cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     height: 100vh;
     position: relative;
+}
+
+@media screen and (min-width: 767px) {
+    body {
+        background-attachment: fixed;
+    }
 }
 
 .inner {
@@ -64,6 +70,21 @@ main {
 
 table{
     margin: 0 auto;
+}
+
+.select-pref {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent url(https://satoshi-moriya.github.io/prefectural-roulette/form-css-arrow.png) no-repeat center right 8px/16px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 0;
+    color: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 0.4em 1.6em 0.4em 0.8em;
+    width: 100%;
 }
 
 .select-pref::-ms-expand {
@@ -171,6 +192,12 @@ table{
     background: #fff;
     padding: 0 5px;
     border: 5px solid #e2d06e;
+    width: 85%;
+}
+@media screen and (min-width: 767px) {
+    .source {
+        width: auto;
+    }
 }
 
 .source p {
